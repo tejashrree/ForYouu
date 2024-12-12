@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForYouu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Loading Screen with countdown -->
+    <div class="loading" id="loading-screen">
+        5
+    </div>
+
+    <!-- Main Content (hidden initially) -->
+    <div class="container" id="main-content">
+        <div class="card">
+            <h1>Pookiefied Birthday boiii🎀🥹 <p>Happyyy Birthdayyy <3</p>
+            </h1>
+            <a href="https://github.com/user-attachments/assets/da666c40-5fa8-4697-abbb-43a0f78428e5" download class="download-btn">Unveil the Mystery</a>
+        </div>
+    </div>
+
+    <!-- Background music -->
+    <audio id="background-music" autoplay loop>
+        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/a-perfectly-good-heart-instrumental-with/1443205032?i=1443205235"></iframe><!-- Replace with your song URL -->
+    </audio>
+
+    <script>
+        let countdown = 5;
+        const loadingScreen = document.getElementById('loading-screen');
+        const mainContent = document.getElementById('main-content');
+
+        // Countdown Timer
+        const countdownTimer = setInterval(() => {
+            countdown--;
+            loadingScreen.textContent = countdown;
+
+            if (countdown === 0) {
+                clearInterval(countdownTimer);
+                loadingScreen.style.display = 'none';
+                mainContent.style.top = '0';
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
